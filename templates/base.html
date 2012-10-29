@@ -1,20 +1,29 @@
-<!doctype html>
-<html>
-<head>
-        <meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0" />
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='images/iphone_icon.png') }}" />
-        <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/iphone_icon.png') }}" />
-        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
-        <link href="{{ url_for('static', filename='images/startup.png') }}" rel="apple-touch-startup-image" />
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        <title>{% block title %}{% endblock %}|georeader</title>
-    {% block head %}
-    {% endblock %}
-</head>
-<body onload="{% block onload %}{% endblock %}">
-    {% block content %}
-    {% endblock %}
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>georeader</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Georeader</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		{% block content %}
+		
+        {% endblock %}	
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
 </body>
+</html>
