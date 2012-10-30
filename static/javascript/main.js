@@ -26,18 +26,17 @@ function handleGetCurrentPosition(location){
 }
 
 function refresh(){
-    $('#results').listview('refresh');
-
     $('#results li').swipeDelete({
         click: function(e){
             e.preventDefault();
             $(this).parents('li').remove();
-            alert('');
         }
     });
     
+    $('#results').listview('refresh');    
 }
 
 function onError(){
-    alert('FAIL');
+    fake_location = {'coords':{'latitude': 54, 'longitude': -0.1}}
+    handleGetCurrentPosition(fake_location);
 }
