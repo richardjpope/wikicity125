@@ -33,6 +33,21 @@ function refresh(){
         }
     });
     
+    $('#results li').swipeDelete({
+        direction: 'swiperight', // standard jquery mobile event name
+        btnLabel: 'Delete',
+        btnTheme: 'b',
+        btnClass: 'aSwipeBtn',
+        click: function(e){
+            e.preventDefault();
+            var url = $(e.target).attr('href');
+            $(this).parents('li').remove();
+            $.post(url, function(data) {
+                console.log(data);
+            });
+        }
+    });
+    
     $('#results').listview('refresh');    
 }
 
