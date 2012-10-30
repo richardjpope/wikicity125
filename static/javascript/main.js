@@ -16,7 +16,7 @@ function handleGetCurrentPosition(location){
     $.getJSON(url, function(data) { 
         for (var i=0; i < data['articles'].length; i++) {
             if($('#' + data['articles'][i]['id']).length == 0){
-                $('#results').append('<li id=' + data['articles'][i]['id']  + '><a data-transition="slidedown" data-rel="dialog" href="/browser/' + data['articles'][i]['id'] + '">' +  data['articles'][i]['title'] + '</a></li>')
+                $('#results').append('<li id=' + data['articles'][i]['id']  + '><a data-transition="slideup" data-rel="dialog" href="/browser/' + data['articles'][i]['id'] + '">' +  data['articles'][i]['title'] + '</a></li>')
             }
         };
         refresh();
