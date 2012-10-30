@@ -32,6 +32,7 @@ function refresh(){
         click: function(e){
             e.preventDefault();
             $(this).parents('li').remove();
+            alert('');
         }
     });
     
