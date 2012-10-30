@@ -12,7 +12,7 @@ def index():
 
 @app.route('/articles/<lat>/<lng>')
 def articles(lat, lng):
-    url = 'http://api.wikilocation.org/articles?lat=%s&lng=%s&limit=3&offset=5&format=json&locale=en' % (lat, lng)
+    url = 'http://api.wikilocation.org/articles?lat=%s&lng=%s&limit=3&radius=4000&format=json&locale=en' % (lat, lng)
     print url
     return urllib2.urlopen(url).read()
     
