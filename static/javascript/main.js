@@ -25,29 +25,7 @@ function handleGetCurrentPosition(location){
     );
 }
 
-function refresh(){
-    $('#results li').swipeDelete({
-        click: function(e){
-            e.preventDefault();
-            $(this).parents('li').remove();
-        }
-    });
-    
-    $('#results li').swipeDelete({
-        direction: 'swiperight', // standard jquery mobile event name
-        btnLabel: 'Delete',
-        btnTheme: 'b',
-        btnClass: 'aSwipeBtn',
-        click: function(e){
-            e.preventDefault();
-            var url = $(e.target).attr('href');
-            $(this).parents('li').remove();
-            $.post(url, function(data) {
-                console.log(data);
-            });
-        }
-    });
-    
+function refresh(){    
     $('#results').listview('refresh');    
 }
 
