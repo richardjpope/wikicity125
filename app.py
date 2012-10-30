@@ -10,6 +10,10 @@ app.debug = True
 def index():
     return render_template('index.html')
 
+@app.route("/browser/<int:wikipedia_id>")
+def browser(wikipedia_id):
+    return render_template('browser.html', wikipedia_id=wikipedia_id)
+    
 @app.route('/articles/<lat>/<lng>')
 def articles(lat, lng):
     url = 'http://api.wikilocation.org/articles?lat=%s&lng=%s&limit=3&radius=4000&format=json&locale=en' % (lat, lng)
