@@ -19,10 +19,22 @@ function handleGetCurrentPosition(location){
                 $('#results').append('<li id=' + data['articles'][i]['id']  + '><a target="_new" href="' + data['articles'][i]['mobileurl']  +'">' +  data['articles'][i]['title'] + '</a></li>')
             }
         };
-        $('#results').listview('refresh');
+        refresh();
         setTimeout(function(){getLocation()}, 5000);                    
       }
     );
+}
+
+function refresh(){
+    $('#results').listview('refresh');
+
+    $('#results li').swipeDelete({
+        click: function(e){
+            e.preventDefault();
+            $(this).parents('li').remove();
+        }
+    });
+    
 }
 
 function onError(){
