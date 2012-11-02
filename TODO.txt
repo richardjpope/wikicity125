@@ -3,3 +3,5 @@
 - cache api calls
 - icons
 - loading gif
+- domain name
+- move start to index
