@@ -10,6 +10,10 @@ app.debug = True
 def index():
     return render_template('index.html')
 
+@app.route("/start")
+def start():
+    return render_template('start.html')
+    
 @app.route("/browser/<int:wikipedia_id>")
 def browser(wikipedia_id):
     return render_template('browser.html', wikipedia_id=wikipedia_id)

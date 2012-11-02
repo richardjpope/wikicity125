@@ -1,2 +1,5 @@
-- hold button
+- size of browser page
+- choose on homepage
 - cache api calls
+- icons
+- loading gif
