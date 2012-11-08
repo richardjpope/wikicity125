@@ -1,7 +1,8 @@
-- size of browser page
+- size of browser pagev
 - choose on homepage
 - cache api calls
-- icons
 - loading gif
 - domain name
-- move start to index
+- sort out events firing
+- check if moved 
+- more gradation on the list items

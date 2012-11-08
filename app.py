@@ -8,7 +8,12 @@ app.debug = True
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    mode = request.args.get('mode', 'start')
+    if not mode in ('start', 'example', 'run'):
+        mode = 'start'
+    print "-----------"
+    print mode
+    return render_template('index.html', mode=mode)
 
 @app.route("/start")
 def start():
