@@ -1,11 +1,5 @@
 {% extends "base.html" %}
-{% block head %}
-	<script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>	
-{% endblock %}	
 {% block content %}
-	<script>
-		var mode='{{mode}}';
-	</script>
     	<ul id="results" data-role="listview">
     	</ul>
 {% endblock %}
