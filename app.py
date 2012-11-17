@@ -6,19 +6,21 @@ import os
 app = Flask(__name__)
 app.debug = True
 
-@app.route("/")
-def index():
+@app.route("/go")
+def go():
     mode = request.args.get('mode', 'start')
-    if not mode in ('start', 'example', 'run'):
-        mode = 'start'
-    print "-----------"
-    print mode
+    if not mode in ('example', 'run'):
+        mode = 'run'
     return render_template('index.html', mode=mode)
 
-@app.route("/start")
+@app.route("/")
 def start():
     return render_template('start.html')
-    
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+            
 @app.route("/browser/<int:wikipedia_id>")
 def browser(wikipedia_id):
     return render_template('browser.html', wikipedia_id=wikipedia_id)

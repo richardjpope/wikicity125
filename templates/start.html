@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-	<h1>
-		Wikicity125 finds nearby Wikipedia articles as you travel through the landscape.
-	</h1>
-	<!-- <h2>If you are on currently on the move ...</h2> -->
-	<a href="/" data-role="button" data-theme="b">I am on the move,<br/>start searching</a>
-	<a href="/" data-role="button" >Watch example journey from <br/>Clerkenwell to Tulse Hill</a>
-		
+    <h1>
+    	Wikicity125 finds nearby Wikipedia articles as you travel through the landscape.
+    </h1>
+    <a href="/go?mode=run" data-role="button" data-theme="b">I am on the move,<br/>start searching</a>
+    <a href="/go?mode=example" data-role="button" >Watch example journey from <br/>Clerkenwell to Tulse Hill</a>		
 {% endblock %}
