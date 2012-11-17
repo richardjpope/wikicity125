@@ -61,7 +61,7 @@ function handleGetCurrentPosition(location){
         if (get_mode() == 'run'){
             timeouts.push(setTimeout(function(){getLocation();}, 5000));
         }else if (get_mode() == 'example'){
-            timeouts.push(setTimeout(function(){fakeLocation();}, 8000));
+            timeouts.push(setTimeout(function(){fakeLocation();}, 4000));
         }
       }
     );
